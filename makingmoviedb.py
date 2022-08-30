@@ -7,10 +7,10 @@ SHEET = './movieDB.xlsx'
 movielist = []
 movieDicts = []
 
-def getMovieData(name, year = ''):
+def getMovieData(name, Rating = ''):
     name = name.replace(' ', '%20')
-    if year != '':
-        return (API_URL + name + "&y=" + year)
+    if Rating != '':
+        return (API_URL + name + "&R=" + Rating)
     return (API_URL + name)
 
 def writeMovieData(data, i):  
@@ -20,14 +20,16 @@ def writeMovieData(data, i):
     duration = (data['duration'].split(' ')[0])
     description = (data['description'])
     Date = Date.split(',')[0]
-    Time = Time.split (',')[0]
+    Time = Time.split(',')[0]
 
     movieDict = {
         'name': name,
-        'year': year,
-        'genre': genre,
-        'runtime': runtime,
-        'language': language,
+        'Rating': Rating,
+        'release date': release date, 
+        'duration': duration,
+        'description': description,
+        'Date': Date, 
+        'Time': Time, 
     }
 
     movieDicts.append(movieDict)
