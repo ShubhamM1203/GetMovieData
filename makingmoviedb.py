@@ -1,7 +1,7 @@
 import requests
 import pandas as pd
 
-API_KEY = "" #Generate your own key from the OMDb website and put it here
+API_KEY = "" #Generate your own key from the IMDb website and put it here
 API_URL = "https://www.imdb.com/chart/top?ref_=nv_mv_250"+ API_KEY + "&t="
 SHEET = './movieDB.xlsx'
 movielist = []
@@ -14,15 +14,16 @@ def getMovieData(name, year = ''):
     return (API_URL + name)
 
 def writeMovieData(data, i):  
-    title = (data['Title'])
-    year = (data['Year'])
-    genre = (data['Genre'])
-    runtime = (data['Runtime'].split(' ')[0])
-    language = (data['Language'])
-    language = language.split(',')[0]
+    name = (data['name'])
+    Rating = (data['Rating'])
+    release date = (data['release date'])
+    duration = (data['duration'].split(' ')[0])
+    description = (data['description'])
+    Date = Date.split(',')[0]
+    Time = Time.split (',')[0]
 
     movieDict = {
-        'name': title,
+        'name': name,
         'year': year,
         'genre': genre,
         'runtime': runtime,
