@@ -2,7 +2,7 @@ import requests
 import pandas as pd
 
 API_KEY = "" #Generate your own key from the OMDb website and put it here
-API_URL = "http://www.omdbapi.com/?apikey="+ API_KEY + "&t="
+API_URL = "https://www.imdb.com/chart/top?ref_=nv_mv_250"+ API_KEY + "&t="
 SHEET = './movieDB.xlsx'
 movielist = []
 movieDicts = []
