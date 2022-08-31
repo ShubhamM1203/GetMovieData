@@ -1,5 +1,5 @@
 # GetMovieData
-A simple python script to get the data of a list of movies using the [OMDb API](https://www.omdbapi.com/). 
+A simple python script to get the data of a list of movies using the [IMDb API](https://www.imdbapi.com/). 
 
 The inital list of movies contained just the titles and was stored in an Excel workbook.
 Using Pandas to read the excel file, the title was used in the API call.
